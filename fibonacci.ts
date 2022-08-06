@@ -1,5 +1,5 @@
 function fibs(n: number) {
-  const fibArr = [] as number[]
+  const fibArr: number[] = []
   let fibOne = 1;
   let fibTwo = 1;
   let fib = fibOne + fibTwo
@@ -24,6 +24,9 @@ function fibs(n: number) {
 
 console.log(fibs(6));
 
-// function fibsRec(n: number): number[] {
-//
-// }
+function fibsRec(n: number, arr: number[] = [0, 1]): number[] {
+  if (n === 1) return arr
+  return fibsRec(n - 1, [...arr, arr[arr.length - 1] + arr[arr.length - 2]])
+}
+
+console.log(fibsRec(6))
