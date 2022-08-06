@@ -17,9 +17,9 @@ function mergeSort(arr: number[]): number[] {
 		while (left.length && right.length) {
 			// Push the smallest number to sorted
 			if (left[0] < right[0]) {
-				sorted.push(left.shift() as number);
+				sorted.push(left.shift());
 			} else {
-				sorted.push(right.shift() as number);
+				sorted.push(right.shift());
 			}
 		}
 
